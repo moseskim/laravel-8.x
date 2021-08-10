@@ -1,0 +1,19 @@
+version: '3'
+services:
+  php-tdd:
+    build: docker/php
+    volumes:
+      - ./:/var/www/tdd
+    container_name: "php_tdd"
+    working_dir: /var/www/tdd
+    tty: true
+    links:
+      - mysql-tdd
+  mysql-tdd:
+    image: mysql:5.7
+    container_name: "mysql"
+    environment:
+      MYSQL_DATABASE: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "53307:3306"

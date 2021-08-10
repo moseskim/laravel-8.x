@@ -1,0 +1,53 @@
+[
+    {
+        "order_code": "1111-1111-1111-1111",
+        "order_date": "2021-04-10 00:00:00",
+        "total_quantity": 1,
+        "total_price": 1000,
+        "customer_name": "사용자 1",
+        "customer_email": "user1@example.com",
+        "destination_name": "배송지 주소 1",
+        "destination_zip": "10001",
+        "destination_prefecture": "서울",
+        "destination_address": "배송지 주소 1",
+        "destination_tel": "010-1234-2345",
+        "order_details": [
+            {
+                "detail_no": 1,
+                "item_name": "제품 1",
+                "item_price": 1000,
+                "quantity": 1,
+                "subtotal_price": 1000
+            }
+        ]
+    },
+    {
+        "order_code": "1111-1111-1111-1112",
+        "order_date": "2021-04-10 23:59:59",
+        "total_quantity": 3,
+        "total_price": 2500,
+        "customer_name": "사용자 2",
+        "customer_email": "user2@example.com",
+        "destination_name": "배송지 주소 2",
+        "destination_zip": "10001",
+        "destination_prefecture": "부산",
+        "destination_address": "배송지 주소 2",
+        "destination_tel": "010-2345-3456",
+        "order_details": [
+            {
+                "detail_no": 1,
+                "item_name": "제품 1",
+                "item_price": 1000,
+                "quantity": 2,
+                "subtotal_price": 2000
+            },
+            {
+                "detail_no": 2,
+                "item_name": "제품 2",
+                "item_price": 500,
+                "quantity": 1,
+                "subtotal_price": 500
+            }
+        ]
+    }
+]

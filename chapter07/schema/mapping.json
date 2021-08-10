@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 3,
+      "number_of_replicas": 0
+    }
+  },
+  "mappings": {
+    "properties": {
+      "review_id": {
+        "type": "integer"
+      },
+      "user_id": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "keyword"
+      },
+      "content": {
+        "type": "keyword"
+      },
+      "tags": {
+        "type": "nested",
+        "properties": {
+          "tag_name": {
+            "type": "keyword"
+          }
+        }
+      },
+      "created_at": {
+        "type": "date",
+        "format": "epoch_second"
+      }
+    }
+  }
+}

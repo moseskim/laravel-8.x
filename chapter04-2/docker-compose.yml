@@ -1,0 +1,18 @@
+version: '3'
+services:
+  php:
+    container_name: chapter04-2-php73
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 80:80
+    tty: true
+    networks:
+      - chapter04-2
+
+networks:
+  chapter04-2:
+    driver: bridge

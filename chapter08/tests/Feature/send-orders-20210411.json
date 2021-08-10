@@ -1,0 +1,24 @@
+[
+    {
+        "order_code": "1111-1111-1111-1113",
+        "order_date": "2021-04-11 00:00:00",
+        "total_quantity": 1,
+        "total_price": 2000,
+        "customer_name": "사용자 3",
+        "customer_email": "user3@example.com",
+        "destination_name": "배송지 주소 3",
+        "destination_zip": "10003",
+        "destination_prefecture": "부산",
+        "destination_address": "배송지 주소 3",
+        "destination_tel": "010-3456-4567",
+        "order_details": [
+            {
+                "detail_no": 1,
+                "item_name": "제품 3",
+                "item_price": 2000,
+                "quantity": 1,
+                "subtotal_price": 2000
+            }
+        ]
+    }
+]

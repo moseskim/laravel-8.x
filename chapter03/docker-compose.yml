@@ -1,0 +1,17 @@
+version: '3'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 80:80
+    tty: true
+    networks:
+      - chapter03
+
+networks:
+  chapter03:
+    driver: bridge

@@ -1,0 +1,12 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method Faker\\\\Generator\\:\\:safeEmail\\(\\)\\.$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Undefined variable\\: \\$this$#"
+			count: 2
+			path: routes/console.php
+

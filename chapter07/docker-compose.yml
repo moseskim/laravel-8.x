@@ -1,0 +1,76 @@
+version: '3'
+services:
+  php:
+    container_name: php73
+    build:
+      context: .
+      dockerfile: ./docker/php-fpm/Dockerfile
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - es01
+      - mysql
+    ports:
+      - 80:80
+    tty: true
+    networks:
+      - sample
+  es01:
+    build:
+      context: .
+      dockerfile: ./docker/elasticsearch/Dockerfile
+    container_name: es01
+    environment:
+      - network.host=0.0.0.0
+      - node.name=es01
+      - discovery.seed_hosts=es01
+      - cluster.initial_master_nodes=es01
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+    tty: true
+    networks:
+      - sample
+  kibana:
+    image: kibana:7.12.0
+    container_name: kibana
+    environment:
+      - server.host=0.0.0.0
+    links:
+      - es01:elasticsearch
+    ports:
+      - 5601:5601
+    networks:
+      - sample
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: sample
+      MYSQL_USER: sample
+      MYSQL_PASSWORD: secret
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/mysql.conf.d/z.cnf
+    ports:
+      - 3306:3306
+    tty: true
+    networks:
+      - sample
+  redis:
+    image: redis:4-alpine3.8
+    ports:
+      - "6379:6379"
+    networks:
+      - sample
+
+networks:
+  sample:
+    driver: bridge
