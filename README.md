@@ -5,7 +5,7 @@
 - [1장](./chapter01)
 - [2장](./chapter02)
 - [3장](./chapter03)
-- [4장](./chapter04)
+- [4장](./chapter04-2)
 - [5장](./chapter06)
 - [6장](./chapter06)
 - [7장](./chapter07)
