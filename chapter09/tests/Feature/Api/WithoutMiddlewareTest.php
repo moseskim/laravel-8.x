@@ -14,8 +14,7 @@ class WithoutMiddlewareTest extends TestCase
     /**
      * @test
      */
-    public function 모든_미들웨어를_비활성화
-    ()
+    public function 모든_미들웨어를_비활성화()
     {
         $response = $this->getJson('/api/live');
 
