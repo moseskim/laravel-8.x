@@ -14,7 +14,7 @@ class SoftdeleteAuthorsTable extends Migration
     public function up()
     {
         Schema::table('authors', function (Blueprint $table) {
-            $table->softDeletes(); // 追加
+            $table->softDeletes(); // 추가
         });
     }
 
@@ -26,7 +26,7 @@ class SoftdeleteAuthorsTable extends Migration
     public function down()
     {
         Schema::table('authors', function (Blueprint $table) {
-            $table->dropColumn('deleted_at'); // 追加
+            $table->dropColumn('deleted_at'); // 추가
         });
     }
 }

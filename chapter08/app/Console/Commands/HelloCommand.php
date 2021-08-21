@@ -22,7 +22,7 @@ class HelloCommand extends Command
      *
      * @var string
      */
-    protected $description = '샘플 명령어(클래스)';
+    protected $description = 'Sample Command(Class)';
 
     /**
      * Create a new command instance.
@@ -41,7 +41,7 @@ class HelloCommand extends Command
      */
     public function handle(): int
     {
-        $this->comment('Hello class command');
+        $this->comment('Hello Class Command');
 
 //        $name = $this->argument('name');
 //        $this->comment('Hello ' . $name);

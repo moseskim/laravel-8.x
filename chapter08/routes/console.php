@@ -19,6 +19,6 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('hello:closure', function () {
-    $this->comment('Hello closure command'); // ① 문자열 출력
-    return 0; // ② 정상 종료이면 0을 반환
-})->describe('샘플 명령어(클로저)'); // ③ 명령어 설명
+    $this->comment('Hello closure command');  // ① 문자열 출력
+    return 0;                                 // ② 정상 종료이면 0을 반환
+})->describe('샘플 명령어(클로저)');            // ③ 명령어 설명

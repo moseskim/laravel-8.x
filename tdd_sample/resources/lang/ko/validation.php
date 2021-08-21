@@ -1,4 +1,4 @@
 <?php
 return [
-    'required' => ':attribute は必須項目です',
+    'required' => ':attribute는 필수 항목입니다.',
 ];
