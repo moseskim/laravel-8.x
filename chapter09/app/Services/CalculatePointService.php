@@ -26,6 +26,6 @@ final class CalculatePointService
         } else {
             $basePoint = 2;
         }
-        return intval($amount / 100) * $basePoint;
+        return intval($amount / 1000) * $basePoint;
     }
 }

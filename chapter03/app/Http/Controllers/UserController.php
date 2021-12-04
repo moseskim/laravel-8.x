@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Models\User;
 use App\Purchase;
 use App\Service\UserService;
 use App\Service\BookReviewService;
