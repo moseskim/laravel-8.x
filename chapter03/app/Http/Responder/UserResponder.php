@@ -5,7 +5,7 @@ namespace App\Http\Responder;
 
 use Illuminate\Http\Response;
 use Illuminate\Contracts\View\Factory as ViewFactory;
-use App\User as UserModel;
+use App\Models\User as UserModel;
 
 class UserResponder
 {

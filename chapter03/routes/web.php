@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
-    Route::get('/user', 'UserController@index');
-    Route::post('/user', 'UserController@store');
+    Route::get('/user', ['UserController::class', 'index']);
+    Route::post('/user', ['UserController::class', 'store']);
     Route::get('/layered/user/{id}', 'Layered\UserController@index');
 });
 
